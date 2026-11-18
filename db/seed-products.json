@@ -1,0 +1,318 @@
+[
+  {
+    "id": "rosewater-pleated-gown",
+    "name": "Rosewater Pleated Gown",
+    "category": "Dresses",
+    "price": 18500,
+    "color": "Dusty Rose",
+    "colors": [
+      "Dusty Rose",
+      "Blush Pink",
+      "Rose Pink"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L"
+    ],
+    "fabric": "Pleated chiffon with a soft satin lining",
+    "description": "A floor length gown in dusty rose, cut with fine pleats that move as you walk. The draped back and flowing skirt make it a gentle choice for evenings and celebrations.",
+    "details": [
+      "Floor length",
+      "Draped open back",
+      "Fully lined",
+      "Dry clean only"
+    ],
+    "image": "/images/rosewater-pleated-gown.webp"
+  },
+  {
+    "id": "mauve-wrap-midi-dress",
+    "name": "Mauve Wrap Midi Dress",
+    "category": "Dresses",
+    "price": 12900,
+    "color": "Mauve",
+    "colors": [
+      "Mauve",
+      "Rose Print",
+      "Slate Blue"
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "fabric": "Matte crepe with a smooth drape",
+    "description": "A midi dress in muted mauve with a soft boat neckline and a skirt that falls in clean folds. Easy to wear from a lunch out to an evening gathering.",
+    "details": [
+      "Midi length",
+      "Boat neckline",
+      "Side zip",
+      "Machine wash cold"
+    ],
+    "image": "/images/mauve-wrap-midi-dress.jpg"
+  },
+  {
+    "id": "champagne-satin-slip-dress",
+    "name": "Champagne Satin Slip Dress",
+    "category": "Dresses",
+    "price": 15400,
+    "color": "Champagne",
+    "colors": [
+      "Champagne",
+      "Sand"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L"
+    ],
+    "fabric": "Satin with a liquid shine",
+    "description": "A modest dress in warm champagne satin that catches the light softly. The high neckline and long sleeves give full, graceful coverage, and the fluid skirt falls to full length.",
+    "details": [
+      "Full length",
+      "High neckline",
+      "Long sleeves",
+      "Dry clean only"
+    ],
+    "image": "/images/champagne-satin-slip-dress.jpg"
+  },
+  {
+    "id": "ivory-summer-dress",
+    "name": "Ivory Summer Dress",
+    "category": "Dresses",
+    "price": 11750,
+    "color": "Ivory",
+    "colors": [
+      "Ivory",
+      "Mint",
+      "White"
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L"
+    ],
+    "fabric": "Light cotton voile",
+    "description": "A light ivory dress made for warm days, with a relaxed bodice and a skirt that sways as you move. Simple, fresh and easy to style.",
+    "details": [
+      "Knee length",
+      "Short sleeves",
+      "Fully lined bodice",
+      "Machine wash cold"
+    ],
+    "image": "/images/ivory-summer-dress.webp"
+  },
+  {
+    "id": "blush-embroidered-kurti",
+    "name": "Blush Embroidered Kurti",
+    "category": "Kurtis",
+    "price": 6850,
+    "color": "Blush Pink",
+    "colors": [
+      "Blush Pink",
+      "Champagne",
+      "Sand"
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "fabric": "Cotton with thread embroidery",
+    "description": "A blush pink kurti with fine floral embroidery across the chest, finished with three quarter sleeves. A graceful everyday piece that pairs with white trousers or jeans.",
+    "details": [
+      "Straight cut",
+      "Embroidered yoke",
+      "Three quarter sleeves",
+      "Machine wash cold"
+    ],
+    "image": "/images/blush-embroidered-kurti.jpg"
+  },
+  {
+    "id": "rose-pink-kurti",
+    "name": "Rose Pink Kurti",
+    "category": "Kurtis",
+    "price": 5450,
+    "color": "Rose Pink",
+    "colors": [
+      "Rose Pink",
+      "Dusty Rose"
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L"
+    ],
+    "fabric": "Soft cambric cotton",
+    "description": "A rose pink kurti with delicate embroidery along the neckline and cuffs. Light, breathable and made for daily wear through the warmer months.",
+    "details": [
+      "Straight cut",
+      "Embroidered neckline",
+      "Full sleeves",
+      "Machine wash cold"
+    ],
+    "image": "/images/rose-pink-kurti.webp"
+  },
+  {
+    "id": "mehreen-printed-kurta",
+    "name": "Mehreen Printed Kurta",
+    "category": "Kurtis",
+    "price": 5950,
+    "color": "Rose Print",
+    "colors": [
+      "Rose Print",
+      "Ivory",
+      "White"
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "fabric": "Printed lawn cotton",
+    "description": "A printed kurta in deep rose tones with a traditional motif pattern. The relaxed fit and soft lawn fabric keep it comfortable all day.",
+    "details": [
+      "Relaxed fit",
+      "All over print",
+      "Full sleeves",
+      "Machine wash cold"
+    ],
+    "image": "/images/mehreen-printed-kurta.webp"
+  },
+  {
+    "id": "slate-print-kurta-set",
+    "name": "Slate Print Kurta Set",
+    "category": "Kurtis",
+    "price": 7250,
+    "color": "Slate Blue",
+    "colors": [
+      "Slate Blue",
+      "Mauve",
+      "Mint"
+    ],
+    "sizes": [
+      "M",
+      "L",
+      "XL"
+    ],
+    "fabric": "Muslin kurta with matching dupatta",
+    "description": "A kurta set in slate blue with a fine printed pattern, worn with a matching dupatta. A complete outfit that needs nothing added.",
+    "details": [
+      "Two piece set",
+      "Matching dupatta included",
+      "Long sleeves",
+      "Gentle machine wash"
+    ],
+    "image": "/images/slate-print-kurta-set.webp"
+  },
+  {
+    "id": "sand-linen-coord-set",
+    "name": "Sand Linen Co-ord Set",
+    "category": "Casual Wear",
+    "price": 8900,
+    "color": "Sand",
+    "colors": [
+      "Sand",
+      "Champagne",
+      "Mauve"
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L"
+    ],
+    "fabric": "Breathable linen blend",
+    "description": "A two piece co-ord set in warm sand, with a relaxed shirt and wide leg trousers. Worn together for an easy put together look, or mixed with pieces you already own.",
+    "details": [
+      "Two piece set",
+      "Wide leg trousers",
+      "Relaxed shirt fit",
+      "Machine wash cold"
+    ],
+    "image": "/images/sand-linen-coord-set.webp"
+  },
+  {
+    "id": "ivory-linen-shirt-set",
+    "name": "Ivory Linen Shirt Set",
+    "category": "Casual Wear",
+    "price": 7600,
+    "color": "Ivory",
+    "colors": [
+      "Ivory",
+      "Blush Pink",
+      "Dusty Rose"
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "fabric": "Linen blend with a soft finish",
+    "description": "An ivory linen shirt set with a buttoned shirt worn long and untied, its hem falling to the waist, with matching trousers. Clean lines and a fabric that keeps its shape through the day.",
+    "details": [
+      "Two piece set",
+      "Buttoned long shirt",
+      "Straight trousers",
+      "Machine wash cold"
+    ],
+    "image": "/images/ivory-linen-shirt-set.webp"
+  },
+  {
+    "id": "mint-summer-shorts-set",
+    "name": "Mint Summer Shorts Set",
+    "category": "Casual Wear",
+    "price": 5200,
+    "color": "Mint",
+    "colors": [
+      "Mint",
+      "Rose Pink"
+    ],
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L"
+    ],
+    "fabric": "Cotton twill and a soft knit top",
+    "description": "A fresh summer pairing of a mint top with white drawstring shorts. Made for holidays, slow weekends and warm evenings.",
+    "details": [
+      "Two piece set",
+      "Drawstring waist",
+      "Relaxed fit",
+      "Machine wash cold"
+    ],
+    "image": "/images/mint-summer-shorts-set.webp"
+  },
+  {
+    "id": "everyday-tee-denim-look",
+    "name": "Everyday Tee and Denim Look",
+    "category": "Casual Wear",
+    "price": 4850,
+    "color": "White",
+    "colors": [
+      "White",
+      "Rose Print",
+      "Slate Blue"
+    ],
+    "sizes": [
+      "S",
+      "M",
+      "L"
+    ],
+    "fabric": "Cotton tee with stretch denim",
+    "description": "The everyday pairing done well: a clean white tee with light wash denim. Simple pieces, chosen carefully, that go with everything.",
+    "details": [
+      "Two piece look",
+      "Classic fit tee",
+      "Mid rise denim",
+      "Machine wash cold"
+    ],
+    "image": "/images/everyday-tee-denim-look.jpg"
+  }
+]

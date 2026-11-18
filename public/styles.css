@@ -1,0 +1,255 @@
+:root {
+        --bg: #f7f1e8;
+        --surface: #fffdf9;
+        --surface-alt: #f1e6da;
+        --text: #3e3234;
+        --dim: #8a6d74;
+        --border: #e3d3c6;
+        --accent: #b98a8f;
+        --accent-deep: #8a5f66;
+        --gold: #c5a46d;
+        --error: #8c2f39;
+      }
+      * { box-sizing: border-box; }
+      html, body { margin: 0; padding: 0; }
+      body {
+        font-family: "Jost", "Segoe UI", system-ui, sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        font-size: 16px;
+        line-height: 1.5;
+      }
+      button, [role="button"], select, summary, input:not([type="checkbox"], [type="radio"]), textarea {
+        min-height: 2.25rem;
+        font-family: inherit;
+      }
+      button { cursor: pointer; background: none; border: none; color: inherit; }
+      img { display: block; max-width: 100%; }
+      .font-display { font-family: "Cormorant Garamond", "Times New Roman", serif; }
+      .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+      /* Header */
+      header.site-header {
+        position: sticky; top: 0; z-index: 40;
+        background: rgba(247, 241, 232, 0.95);
+        backdrop-filter: blur(8px);
+        border-bottom: 1px solid var(--border);
+      }
+      .header-inner { max-width: 72rem; margin: 0 auto; padding: 0 1rem; }
+      .header-row { display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; padding: 0.75rem 0; }
+      .header-nav-left { display: none; flex: 1; align-items: center; }
+      .header-nav-right { display: flex; align-items: center; flex: 1; justify-content: flex-end; gap: 0.25rem; }
+      .nav-btn {
+        padding: 0.5rem 0.75rem; font-size: 13px; letter-spacing: 0.18em;
+        text-transform: uppercase; color: var(--text); min-height: 2.25rem;
+      }
+      .nav-btn:hover { color: var(--accent-deep); }
+      .nav-btn.desktop-only { display: none; }
+      .logo-btn { display: flex; align-items: center; gap: 0.625rem; padding: 0.25rem; }
+      .logo-word { font-family: "Cormorant Garamond", serif; font-size: 19px; font-weight: 600; letter-spacing: 0.14em; color: var(--text); }
+      .bag-btn { position: relative; }
+      .bag-count {
+        position: absolute; top: -2px; right: 0; display: flex; height: 1.25rem; min-width: 1.25rem;
+        align-items: center; justify-content: center; border-radius: 999px;
+        background: var(--accent); padding: 0 0.25rem; font-size: 11px; font-weight: 500; color: #fff;
+        letter-spacing: 0;
+      }
+      .menu-btn { padding: 0.5rem; font-size: 20px; line-height: 1; min-width: 2.75rem; min-height: 2.75rem; }
+      .mobile-menu { border-top: 1px solid var(--border); padding: 0.5rem 0; display: flex; flex-direction: column; align-items: flex-start; }
+      .header-rule { height: 3px; background: rgba(185, 138, 143, 0.7); }
+      @media (min-width: 768px) {
+        .header-nav-left { display: flex; }
+        .nav-btn.desktop-only { display: inline-block; }
+        .menu-btn { display: none; }
+        .mobile-menu { display: none !important; }
+        .logo-word { font-size: 30px; letter-spacing: 0.28em; }
+      }
+      @media (min-width: 640px) { .logo-word { font-size: 24px; } }
+      @media (min-width: 768px) { .logo-word { font-size: 30px; } }
+
+      /* Layout */
+      .container { max-width: 72rem; margin: 0 auto; padding: 0 1rem; }
+      .container-narrow { max-width: 56rem; margin: 0 auto; padding: 0 1rem; }
+      .container-mid { max-width: 64rem; margin: 0 auto; padding: 0 1rem; }
+      .container-form { max-width: 42rem; margin: 0 auto; padding: 0 1rem; }
+
+      /* Buttons */
+      .btn-primary {
+        display: inline-block; background: var(--accent-deep); color: #fff; border: none;
+        padding: 0.75rem 2rem; font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase;
+        min-height: 2.75rem;
+      }
+      .btn-primary:hover { opacity: 0.9; }
+      .btn-primary:disabled { opacity: 0.6; }
+      .btn-outline {
+        display: inline-block; background: none; border: 1px solid var(--accent-deep); color: var(--accent-deep);
+        padding: 0.75rem 2rem; font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase; min-height: 2.75rem;
+      }
+      .btn-outline:hover { background: var(--surface-alt); }
+      .btn-block { width: 100%; }
+      .btn-outline-block {
+        width: 100%; border: 1px solid var(--border); padding: 0.75rem 2rem;
+        font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; min-height: 2.75rem;
+      }
+      .btn-outline-block:hover { background: var(--surface-alt); }
+
+      /* Product card. min-width 0 lets a card shrink below its content's
+         minimum width, so the 2-column grids below never force the page
+         wider than the viewport on phones. */
+      .card { display: flex; flex-direction: column; background: var(--surface); border: 1px solid var(--border); min-width: 0; }
+      .card-photo-btn { display: block; width: 100%; padding: 0; overflow: hidden; min-height: 0; }
+      .product-photo { aspect-ratio: 3 / 4; width: 100%; object-fit: cover; transition: transform 0.5s ease; }
+      .product-photo:hover { transform: scale(1.03); }
+      .card-body { display: flex; flex: 1; flex-direction: column; padding: 0.75rem 1rem 1rem; }
+      .card-name { font-family: "Cormorant Garamond", serif; font-size: 19px; font-weight: 600; line-height: 1.3; margin: 0; }
+      .card-cat { margin: 0.125rem 0 0; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--dim); }
+      .card-price { margin: 0.375rem 0 0; font-size: 15px; font-weight: 500; }
+      .card-colors { margin: 0.5rem 0 0; font-size: 12px; line-height: 1.5; color: var(--dim); }
+      .color-dot { display: inline-block; width: 14px; height: 14px; border-radius: 999px; border: 1px solid var(--border); flex-shrink: 0; vertical-align: -2px; }
+      .card-actions { margin-top: 0.75rem; display: flex; gap: 0.5rem; }
+      .btn-card-outline {
+        flex: 1; border: 1px solid var(--accent-deep); color: var(--accent-deep); background: none;
+        padding: 0.5rem 0.75rem; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; min-height: 2.5rem;
+      }
+      .btn-card-outline:hover { background: var(--surface-alt); }
+      .btn-card-solid {
+        flex: 1; background: var(--accent-deep); color: #fff; border: none;
+        padding: 0.5rem 0.75rem; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; min-height: 2.5rem;
+      }
+      .btn-card-solid:hover { opacity: 0.9; }
+
+      /* Grids. minmax(0, 1fr) instead of plain 1fr lets each track shrink
+         below a card's minimum content width. At 390px the two side by side
+         card buttons need 180px per card, which made the 2-column grid
+         376px wide inside a 358px container (scrollWidth 392). With
+         minmax(0, 1fr) the tracks are exactly 171px at 390px and the page
+         fits. Desktop tracks are wider than the content minimum, so the
+         desktop layout is unchanged. */
+      .grid-featured { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; margin-top: 1.75rem; }
+      @media (min-width: 1024px) { .grid-featured { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+      .grid-cats { display: grid; gap: 1rem; margin-top: 1.75rem; }
+      @media (min-width: 768px) { .grid-cats { grid-template-columns: repeat(3, 1fr); } }
+      .grid-shop { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+      @media (min-width: 1280px) { .grid-shop { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+      .grid-related { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; margin-top: 1.5rem; }
+      @media (min-width: 1024px) { .grid-related { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+      /* On phones a card is too narrow for the two card buttons side by
+         side, so they stack full width instead of forcing the card wider. */
+      @media (max-width: 480px) {
+        .card-actions { flex-wrap: wrap; }
+        .btn-card-outline, .btn-card-solid { flex: 1 1 100%; }
+      }
+      .shop-layout { display: grid; gap: 2rem; margin-top: 2rem; }
+      @media (min-width: 1024px) { .shop-layout { grid-template-columns: 220px 1fr; } }
+      .split-2 { display: grid; gap: 1.5rem; align-items: center; }
+      @media (min-width: 768px) { .split-2 { grid-template-columns: repeat(2, 1fr); } }
+      .split-2-top { display: grid; gap: 2rem; align-items: start; }
+      @media (min-width: 768px) { .split-2-top { grid-template-columns: repeat(2, 1fr); } }
+
+      /* Hero, full photo, no crop: portrait hero (900 x 1198) shown at its
+         natural shape, as in the canonical Threadora fix. Desktop is a
+         split, full photo on the left and the panel on the right. Mobile
+         stays stacked, photo above the panel, unchanged. */
+      .hero-split { display: grid; }
+      @media (min-width: 768px) { .hero-split { grid-template-columns: repeat(2, 1fr); } }
+      .hero-split img { display: block; width: 100%; height: auto; }
+      .hero-split .hero-panel { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 2rem 1.25rem; border-top: none; }
+      @media (min-width: 768px) { .hero-split .hero-panel { border-left: none; } }
+      .checkout-layout { display: grid; gap: 2rem; margin-top: 2rem; }
+      @media (min-width: 768px) { .checkout-layout { grid-template-columns: 1fr 360px; } }
+
+      /* Panels and forms */
+      .panel { background: var(--surface); border: 1px solid var(--border); }
+      .field-label { font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--dim); display: block; }
+      .field-input {
+        margin-top: 0.375rem; width: 100%; border: 1px solid var(--border); background: var(--surface);
+        padding: 0.625rem 0.75rem; font-size: 14px; outline: none; color: var(--text);
+      }
+      .field-input:focus { border-color: var(--accent); }
+      select.field-input { min-height: 2.5rem; }
+      .form-error { color: var(--error); font-size: 14px; }
+      .gold-rule { margin: 0.75rem auto 0; height: 1px; width: 6rem; background: var(--gold); }
+      .gold-rule-left { margin: 0.75rem 0 0; height: 1px; width: 6rem; background: var(--gold); }
+
+      /* Quantity control */
+      .qty-control { display: flex; align-items: center; border: 1px solid var(--border); background: var(--surface); }
+      .qty-btn { padding: 0.5rem 0.75rem; font-size: 18px; min-width: 2.75rem; min-height: 2.5rem; }
+      .qty-btn-sm { padding: 0.375rem 0.75rem; font-size: 18px; min-width: 2.75rem; min-height: 2.25rem; }
+      .qty-value { min-width: 2rem; text-align: center; font-size: 14px; }
+
+      /* Cart */
+      .cart-list { margin: 2rem 0 0; padding: 0; list-style: none; background: var(--surface); border: 1px solid var(--border); }
+      .cart-line { display: flex; gap: 1rem; padding: 1rem; border-bottom: 1px solid var(--border); }
+      .cart-line:last-child { border-bottom: none; }
+      .cart-thumb { height: 7rem; width: 5rem; flex-shrink: 0; object-fit: cover; object-position: top; }
+
+      /* Product detail */
+      .thumb-btn { border: 2px solid transparent; padding: 0; min-height: 0; line-height: 0; }
+      .thumb-btn.active { border-color: var(--accent-deep); }
+      .thumb-img { height: 5rem; width: 4rem; object-fit: cover; object-position: top; }
+      .detail-list { display: flex; gap: 0.75rem; font-size: 14px; margin-top: 0.5rem; }
+      .detail-list dt { width: 5rem; flex-shrink: 0; color: var(--dim); margin: 0; }
+      .detail-list dd { margin: 0; }
+
+      /* Footer */
+      footer.site-footer { margin-top: 4rem; background: var(--surface-alt); border-top: 1px solid var(--border); }
+      .footer-grid { max-width: 72rem; margin: 0 auto; padding: 2.5rem 1rem; display: grid; gap: 2.5rem; }
+      @media (min-width: 768px) { .footer-grid { grid-template-columns: repeat(3, 1fr); } }
+      .footer-link { display: block; padding: 0.375rem 0; font-size: 14px; text-align: left; min-height: 2rem; }
+      .footer-link:hover { color: var(--accent-deep); }
+      .newsletter-form { margin-top: 0.75rem; display: flex; gap: 0.5rem; }
+      .newsletter-input {
+        min-width: 0; flex: 1; border: 1px solid var(--border); background: var(--surface);
+        padding: 0.5rem 0.75rem; font-size: 14px; outline: none;
+      }
+      .newsletter-input:focus { border-color: var(--accent); }
+      .newsletter-btn {
+        flex-shrink: 0; background: var(--accent-deep); color: #fff; border: none;
+        padding: 0.5rem 1rem; font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; min-height: 2.5rem;
+      }
+      .newsletter-btn:disabled { opacity: 0.6; }
+
+      /* Toast */
+      .toast {
+        position: fixed; bottom: 1.25rem; left: 50%; transform: translateX(-50%); z-index: 50;
+        width: calc(100% - 2rem); max-width: 28rem; background: var(--text); color: #f7f1e8;
+        padding: 0.875rem 1.25rem; text-align: center; font-size: 14px;
+        box-shadow: 0 10px 25px rgba(62, 50, 52, 0.25);
+      }
+      .toast button { color: #f7f1e8; text-decoration: underline; text-underline-offset: 4px; margin-left: 0.75rem; padding: 0.25rem; }
+
+      /* Intro overlay */
+      .intro-overlay {
+        position: fixed; inset: 0; z-index: 60; display: flex; flex-direction: column;
+        align-items: center; justify-content: center; background: #8a6d74; padding: 0 1.5rem;
+      }
+      .intro-box { border: 1px solid rgba(197, 164, 109, 0.8); padding: 2.5rem 2rem; text-align: center; background: rgba(150, 121, 127, 0.4); max-width: 100%; }
+      @media (min-width: 768px) { .intro-box { padding: 2.5rem 3.5rem; } }
+      .intro-word { font-family: "Cormorant Garamond", serif; font-weight: 600; letter-spacing: 0.14em; white-space: nowrap; color: #f7f1e8; font-size: 26px; margin: 0; }
+      @media (min-width: 640px) { .intro-word { font-size: 36px; } }
+      @media (min-width: 768px) { .intro-word { font-size: 60px; letter-spacing: 0.3em; } }
+      .intro-skip {
+        margin-top: 2rem; border: 1px solid rgba(247, 241, 232, 0.7); color: #f7f1e8;
+        padding: 0.625rem 1.5rem; font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase; min-height: 2.75rem;
+      }
+      .intro-skip:hover { background: rgba(255, 255, 255, 0.1); }
+
+      /* Animations. They run the same with reduced motion settings. */
+      @keyframes intro-letter { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+      @keyframes intro-line { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+      @keyframes intro-fade { from { opacity: 0; } to { opacity: 1; } }
+      @keyframes intro-curtain { from { transform: translateY(0); } to { transform: translateY(-100%); } }
+      .intro-letter { display: inline-block; opacity: 0; animation: intro-letter 0.7s ease forwards; }
+      .intro-line { transform-origin: left; animation: intro-line 1.4s ease 0.5s both; margin: 1.25rem auto 0; height: 1px; width: 12rem; background: var(--gold); }
+      .intro-tagline { opacity: 0; animation: intro-fade 0.9s ease 1s forwards; margin: 1rem 0 0; font-family: "Cormorant Garamond", serif; font-size: 18px; font-style: italic; color: #f1e6da; }
+      @media (min-width: 768px) { .intro-tagline { font-size: 20px; } }
+      .intro-leaving { animation: intro-curtain 0.7s ease forwards; }
+      @keyframes toast-in { from { opacity: 0; transform: translate(-50%, 8px); } to { opacity: 1; transform: translate(-50%, 0); } }
+      .toast-in { animation: toast-in 0.25s ease both; }
+      @keyframes page-in { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+      .page-in { animation: page-in 0.45s ease both; }
+      @keyframes menu-in { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: translateY(0); } }
+      .menu-in { animation: menu-in 0.25s ease both; }
+
+/* Admin Panel link in the footer is an anchor, not a button. */
+a.footer-link { text-decoration: none; color: inherit; }
